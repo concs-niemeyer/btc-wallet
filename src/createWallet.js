@@ -1,6 +1,6 @@
-const bip32 = require('bip32');
-const bip39 = require('bip39');
-const bitcoin = require('bitcoinjs-lib');
+const bip32 = require("bip32");
+const bip39 = require("bip39");
+const bitcoin = require("bitcoinjs-lib");
 
 // Definir a rede
 const network = bitcoin.networks.testnet;
@@ -21,7 +21,7 @@ let node = account.derive(0).derive(0);
 
 // Criar o endereço P2SH SegWit
 let btcAddress = bitcoin.payments.p2pkh({
-	pubkey: node.publicKey,
+  pubkey: node.publicKey,
   network: network,
 }).address;
 
